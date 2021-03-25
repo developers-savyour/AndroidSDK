@@ -1,0 +1,3 @@
+include ':savyourlibrary'
+include ':app'
+rootProject.name = "SavyourSDK"
