@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.android.savyourlibrary.SavyourTracker;
+import com.android.savyourlibrary.SavyourSDK;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SavyourTracker savyourTracker =new SavyourTracker();
-        savyourTracker.initData(getIntent());
+        SavyourSDK savyourSDK =new SavyourSDK();
+        savyourSDK.initData(getIntent());
     }
 }

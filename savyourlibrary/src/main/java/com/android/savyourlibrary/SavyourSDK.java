@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.widget.Toast;
 import android.util.Log;
 
-public class SavyourTracker
+public class SavyourSDK
 {
     private  final String TAG = "SAVYOUR TRACKER";
 
