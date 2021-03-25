@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 public class SavyourTracker
 {
-    private  final String TAG = "SAVYOUR PLUGIN";
+    private  final String TAG = "SAVYOUR TRACKER";
 
     public  void showConnectedMessage(Context c, String message){
 
