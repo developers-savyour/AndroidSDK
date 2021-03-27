@@ -29,17 +29,24 @@ public class SavyourSDK
         if(intent!=null)
         {
             Log.e(TAG,"Intent is not null");
-
-            if(intent.getAction().equalsIgnoreCase("savyour"))
+            if(intent.getAction()!=null)
             {
+                if(intent.getAction().equalsIgnoreCase("savyour"))
+                {
 
-                Log.e(TAG,"Is Coming from savyour application");
-                Log.e(TAG,"user Id is: " + intent.getStringExtra("userid"));
+                    Log.e(TAG,"Is Coming from savyour application");
+                    Log.e(TAG,"user Id is: " + intent.getStringExtra("userid"));
+                }
+                else
+                {
+                    Log.e(TAG,"Is not Coming from savyour application");
+                }
             }
             else
             {
-                Log.e(TAG,"Is not Coming from savyour application");
+                Log.e(TAG,"Intent action is null");
             }
+
         }
         else
         {
