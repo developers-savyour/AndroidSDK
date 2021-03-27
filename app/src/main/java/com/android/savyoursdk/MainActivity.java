@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import com.android.savyourlibrary.SavyourSDK;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,7 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        HashMap<String, String> params = new HashMap<>();
         SavyourSDK savyourSDK =new SavyourSDK();
         savyourSDK.initData(getIntent());
+        savyourSDK.orderPlaced(params);
     }
 }
