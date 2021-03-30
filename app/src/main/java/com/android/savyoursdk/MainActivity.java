@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         SavyourSDK savyourSDK = new SavyourSDK();
         //initialization
-        savyourSDK.init(getIntent());
+        savyourSDK.init(this, getIntent());
         //order
         HashMap<String, String> params = new HashMap<>();
         params.put(SavyourSDK.ORDER_ID, "98765");
