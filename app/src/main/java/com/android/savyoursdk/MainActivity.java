@@ -15,9 +15,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SavyourSDK savyourSDK = new SavyourSDK();
+        //initialization
+        savyourSDK.init(getIntent());
+        //order
         HashMap<String, String> params = new HashMap<>();
-        SavyourSDK savyourSDK =new SavyourSDK();
-        savyourSDK.initData(getIntent());
-        savyourSDK.orderPlaced(params);
+        params.put(SavyourSDK.ORDER_ID, "98765");
+        savyourSDK.order(this, params);
     }
 }

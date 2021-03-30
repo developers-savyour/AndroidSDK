@@ -6,20 +6,18 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class WebClient
-{
-    private static Retrofit INSTANCE;
+public class WebClient {
 
+    private static Retrofit INSTANCE;
+    private static final String BASE_URL = "https://api-staging.savyour.com.pk/v3/";
 
     public static Retrofit getInstance() {
-        if (INSTANCE == null) {
+        if (INSTANCE == null)
             setupRestClient();
-        }
         return INSTANCE;
     }
 
     public static void setupRestClient() {
-
         OkHttpClient httpClient = new OkHttpClient.Builder()
                 .addInterceptor(new LoggingInterceptor())
                 .connectTimeout(30, TimeUnit.SECONDS)
@@ -28,7 +26,7 @@ public class WebClient
                 .build();
 
         INSTANCE = new Retrofit.Builder()
-                .baseUrl("https://api-staging.savyour.com.pk/v3/")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient)
                 .build();
